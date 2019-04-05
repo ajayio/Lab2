@@ -144,6 +144,28 @@ Console.ReadLine();
 }  
 } 
 
+
+7th cuboid
+
+using System;  
+class Demo{
+    public delegate void cube(int a);
+     public delegate void cuboid(int a,int b,int c);
+     public void c1(int a){
+         Console.WriteLine(a*a*a);
+     }
+     public void c2(int a,int b,int c){
+         Console.WriteLine(a*b*c);
+     }
+      public static void Main(){
+         Demo d=new Demo();
+         cube obj1=new cube(d.c1);
+         cuboid obj2=new cuboid(d.c2);
+         obj1(5);
+         obj2(5,3,2);
+     }
+    
+}
     
     
     
